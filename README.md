@@ -15,7 +15,7 @@ django-admin startproject todo .
 python manage.py runserver
 ```
 
-![Django default landing page]()
+![Django Install Success](https://raw.githubusercontent.com/SinkuKumar/ToDo/master/assets/Screenshot%20from%202021-12-19%2017-34-02.png)
 
 * Quit development server```ctrl + c```
 
@@ -44,7 +44,7 @@ touch index.html
 ```
 
 * Go to [Bootstrap Getting Started](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and copy starter template
-
+![Bootstrap Starter Template](https://raw.githubusercontent.com/SinkuKumar/ToDo/master/assets/Screenshot%20from%202021-12-19%2017-39-38.png)
 * Paste starter template in ```index.html```
 
 * Go to ```settings.py``` file and add ```'todo',```
@@ -88,7 +88,7 @@ urlpatterns = [
 python manage.py runserver
 ```
 
-![Django Hello World Template]()
+![Django Hello World Template](https://raw.githubusercontent.com/SinkuKumar/ToDo/master/assets/Screenshot%20from%202021-12-19%2018-21-15.png)
 
 * Prepare a form for ToDo input.
 
