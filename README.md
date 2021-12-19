@@ -1,4 +1,4 @@
-# To Do Web App in using Django
+# To Do Web App using Django
 
 * Install Django
 ```commandline
