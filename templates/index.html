@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Todo App</h1>
+        <form method="POST" action="/">
+            <div class="input-group mt-4">
+                <input type="text" class="form-control" name="task" placeholder="Add a new task" required>
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Add Task</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <ul class="list-group mt-4">
+            {% for todo in todos %}
+                <li class="list-group-item {% if todo.completed %}text-muted{% endif %}">
+                    {{todo.id}}.
+                    {% if todo.completed %}
+                        <del>{{ todo.task }}</del>
+                    {% else %}
+                        {{ todo.task }}
+                    {% endif %}
+                    <div class="float-right">
+                        <form method="POST" action="/update/{{ todo.id }}" style="display: inline-block;">
+                            <button class="btn btn-sm btn-success" type="submit">
+                                {% if todo.completed %}
+                                    Undo
+                                {% else %}
+                                    Done
+                                {% endif %}
+                            </button>
+                        </form>
+                        <form method="GET" action="/delete/{{ todo.id }}" style="display: inline-block;">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
