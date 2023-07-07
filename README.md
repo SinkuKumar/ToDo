@@ -40,7 +40,7 @@ You can try out the application by visiting the following link: [Todo App Demo](
    flask run
    ```
 
-2. Open your web browser and visit `http://localhost:5000` to access the Todo app.
+2. Open your web browser and visit `http://localhost:815` to access the Todo app.
 
 ## Features
 
